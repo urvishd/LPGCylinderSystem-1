@@ -4,6 +4,11 @@
     ViewData["Title"] = "Detail";
 }
 
+@if (ViewBag.Error == "Eroor")
+{
+    <h1>No bookings yet!!!!</h1>
+}
+else { 
 <h1>Detail</h1>
 @foreach (var item in Model) {
 <div>
@@ -50,5 +55,7 @@
         <a class="btn btn-dark" asp-controller="Complaint" asp-action="Resolved" asp-route-id="@item.Booking_Id">Resolved Complaint</a>
     </dl>
 </div>
+
+}
 
 }

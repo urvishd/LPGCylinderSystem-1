@@ -40,20 +40,37 @@ namespace LPGCylinderSystem.Controllers
         {
             complaint.Complaint_Id = ObjectId.GenerateNewId().ToString();
             complaint.Status = "pending";
+            
             //complaint.Booking_Id = collection["Booking_Id"];
           //  await _classRepository.CreateComplaintAsync(complaint, token);
             var user1 = _userManager.FindByNameAsync(User.Identity.Name.ToUpper());
             var complaints = user1.Result.Complaints;
+            if (complaint.Booking_Id == null && complaints == null)
+            {
+                ViewData["Error"] = "Error";
+                return View();
+            }
+            if(complaint.Booking_Id == null)
+            {
+                return View(complaints);
+            }
             if (complaints == null)
             {
                 complaints = new List<Complaint>();
+                complaints.Add(complaint);
+                user1.Result.Complaints = complaints;
+                await _userManager.UpdateAsync(user1.Result);
+                return View(complaints);
             }
-            complaints.Add(complaint);
-            user1.Result.Complaints = complaints;
-            await _userManager.UpdateAsync(user1.Result);
+            else
+            {
+                complaints.Add(complaint);
+                user1.Result.Complaints = complaints;
+                await _userManager.UpdateAsync(user1.Result);
+                return View(complaints);
+            }
 
-
-            return View(complaints);
+            
         }
 
         // GET: ComplaintController/Create

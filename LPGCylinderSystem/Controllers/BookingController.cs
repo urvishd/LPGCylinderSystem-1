@@ -34,6 +34,11 @@ namespace LPGCylinderSystem.Controllers
         public async Task<IActionResult> DetailAsync()
         {
            var user1 = await _userManager.FindByNameAsync(User.Identity.Name.ToUpper());
+            if (user1.Bookings == null)
+            {
+                ViewData["Error"] = "Eroor";
+                return View();
+            }
            IEnumerable<Booking> booking= user1.Bookings;
            return View(booking);
         }
