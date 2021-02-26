@@ -1,0 +1,71 @@
+﻿@model LPGCylinderSystem.Models.Complaint
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h1>Index</h1>
+
+<h4>Complaint</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Booking_Id" class="control-label"></label>
+                <input asp-for="Booking_Id" class="form-control" value="@ViewBag.Booking_id" name="Booking_Id" />
+                <span asp-validation-for="Booking_Id" class="text-danger"></span>
+            </div>
+        <div class="form-group">
+
+            <h4><b>Category</b></h4>
+            <select asp-for="Category" name="Category" class="form-control form-control-lg" onclick="darkColor" id="exampleFormControlSelect2">
+
+                <option>New Connection related</option>
+                <option>Forced Sale of Accessories</option>
+                <option>Cylinder Quality related</option>
+                <option>Refill supply related </option>
+                <option>Cash & Carry related </option>
+                <option>Rude Behaviour </option>
+                <option>Subsidy related </option>
+                <option>Diversion / Misuse </option>
+                <option>service related </option>
+                <option>Online/Website Payment issues </option>
+                <option>SMS / refill related </option>
+                <option>Bulk LPG related </option>
+                <option>Customer request </option>
+            </select>
+
+            @*<label asp-for="Category" class="control-label"></label>
+            <input asp-for="Category" class="form-control" />*@
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Remark" class="control-label"></label>
+                <input asp-for="Remark" class="form-control" />
+                <span asp-validation-for="Remark" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

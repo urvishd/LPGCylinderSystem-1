@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LPGCylinderSystem.Models.Booking>
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+@foreach (var item in Model) {
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.Booking_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @item.Booking_Id
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.PaymentMethod)
+        </dt>
+        <dd class="col-sm-10">
+            @item.PaymentMethod
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.SubsidyAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @item.SubsidyAmount
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.OrderStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @item.OrderStatus
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.DAC)
+        </dt>
+        <dd class="col-sm-10">
+            @item.DAC
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(item => item.BookingDate)
+        </dt>
+        <dd class="col-sm-10">
+            @item.BookingDate
+        </dd>
+        <a class="btn btn-dark" asp-controller="Complaint" asp-action="Index" asp-route-id="@item.Booking_Id">Complaint</a>
+        <a class="btn btn-dark" asp-controller="Complaint" asp-action="Resolved" asp-route-id="@item.Booking_Id">Resolved Complaint</a>
+    </dl>
+</div>
+
+}

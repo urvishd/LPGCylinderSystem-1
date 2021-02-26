@@ -1,0 +1,28 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@*@if (User.IsInRole("ADMIN"))
+{
+  
+    <a class="buttton button2" type="button" asp-controller="Admin" asp-action="Index">Admin</a>
+}
+else
+{*@
+
+
+<div class="text-center">
+
+    <a class="btn btn-primary" type="button" asp-controller="Booking" asp-action="Index">Book</a>
+    <a class="btn btn-primary" type="button" asp-controller="Booking" asp-action="Detail">Booking Order</a>
+    <a class="btn btn-primary" type="button" asp-controller="Complaint" asp-action="Details">View  Complaints</a>
+
+
+</div>
+@*  *@
+
+

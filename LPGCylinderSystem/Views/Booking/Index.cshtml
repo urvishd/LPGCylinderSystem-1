@@ -1,0 +1,94 @@
+﻿@model LPGCylinderSystem.Models.ApplicationUser
+@using LPGCylinderSystem.Models
+
+@{
+    var user1 = @ViewBag.user;
+}
+
+
+
+
+
+<link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css" />
+<link rel="stylesheet" href="~/assets/css/style.css" />
+<link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css" />
+<link rel="shortcut icon" href="~/assets/images/favicon.ico" />
+
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-auto mx-auto">
+                    <div class="auth-form-light text-left p-5">
+
+                        <h1>Book your Cylinder</h1>
+                        <br>
+                        <br>
+                        <form class="pt-4" method="post" enctype="multipart/form-data" asp-controller="Booking" asp-action="ChooseMethod">
+
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <h4><b>Refill cylinder request for</b></h4>
+                                    <select name="cylindertype" class="form-control form-control-lg" onclick="darkColor" id="exampleFormControlSelect2">
+
+                                        <option value="711">14.2 Kg</option>
+                                        <option value="126">2.5 Kg</option>
+                                        <option value="1000">20 Kg</option>
+
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>Distrubutor Name</h4>
+                                        <p>Jay Yogeshwar Gas Agency</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>Consumer Number</h4>
+                                        <p>@user1.Connection_Id</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Consumer Name</h4>
+                                    <p>@user1.Name</p>
+                                </div>
+                                <div class="col">
+                                    <h4>Shipping Adress</h4>
+                                    <p>@user1.Address</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Registered Number</h4>
+                                    <p>@user1.MobileNo</p>
+                                </div>
+                                <div class="col">
+                                    <h4>Consumer Emailid</h4>
+                                    <p>@user1.Email</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="mt-1">
+                                <button class="btn btn-gradient-dark" value="submit" type="submit">BOOK NOW</button> <a class="btn" asp-controller="Home" asp-action="Index">Cancel</a>
+                            </div>
+                            <br />
+                            <br />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="~/assets/js/off-canvas.js"></script>
+<script src="~/assets/js/hoverable-collapse.js"></script>
+<script src="~/assets/js/misc.js"></script>
