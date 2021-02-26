@@ -26,6 +26,10 @@ namespace LPGCylinderSystem.Controllers
             {
                 return RedirectToAction("Index", "Admin");
             }
+            if (User.IsInRole("DELIVERYBOY"))
+            {
+                return RedirectToAction("Index", "DeliveryBoy");
+            }
             return View();
         }
 
