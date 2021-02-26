@@ -255,6 +255,7 @@ H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Complaint\Details.cshtml.g.cs
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Complaint\Index.cshtml.g.cs
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Complaint\Resolve.cshtml.g.cs
+H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Complaint\Resolved.cshtml.g.cs
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -270,5 +271,3 @@ H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\LPGCylinderSystem.dll
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\LPGCylinderSystem.pdb
 H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\LPGCylinderSystem.genruntimeconfig.cache
-H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\LPGCylinderSystem.csprojAssemblyReference.cache
-H:\SEM 6 session 1\SDP\LPGCylinderSystem\LPGCylinderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Complaint\Resolved.cshtml.g.cs

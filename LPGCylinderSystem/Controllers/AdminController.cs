@@ -40,9 +40,26 @@ namespace LPGCylinderSystem.Controllers
         public ActionResult Details(int id)
         {
            IEnumerable<ApplicationUser> users= _classRepository.GetuserssAsync();
-           
 
-            return View(users);
+            int flag= 0;
+            foreach(var user in users)
+            {
+                if (user.Complaints != null)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0)
+            {
+                ViewData["Error"] = "Error";
+                return View();
+            }
+            else
+            {
+                return View(users);
+            }
+            
         }
 
         // GET: AdminController/Create
